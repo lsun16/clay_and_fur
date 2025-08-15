@@ -7,31 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B22D6762E4ED57F00D80705 /* ClayAndFurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6752E4ED57F00D80705 /* ClayAndFurApp.swift */; };
-		1B22D6782E4ED57F00D80705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6772E4ED57F00D80705 /* ContentView.swift */; };
-		1B22D67A2E4ED57F00D80705 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6792E4ED57F00D80705 /* Item.swift */; };
-		1B22D67C2E4ED58000D80705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22D67B2E4ED58000D80705 /* Assets.xcassets */; };
-		1B22D67F2E4ED58000D80705 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22D67E2E4ED58000D80705 /* Preview Assets.xcassets */; };
 		1B22D6892E4ED58000D80705 /* ClayAndFurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6882E4ED58000D80705 /* ClayAndFurTests.swift */; };
 		1B22D6932E4ED58000D80705 /* ClayAndFurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6922E4ED58000D80705 /* ClayAndFurUITests.swift */; };
 		1B22D6952E4ED58000D80705 /* ClayAndFurUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6942E4ED58000D80705 /* ClayAndFurUITestsLaunchTests.swift */; };
-		1B22D6B02E4EDA3000D80705 /* PiecesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6A12E4EDA3000D80705 /* PiecesListView.swift */; };
-		1B22D6B12E4EDA3000D80705 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6A22E4EDA3000D80705 /* DashboardView.swift */; };
-		1B22D6B22E4EDA3000D80705 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6A32E4EDA3000D80705 /* SettingsView.swift */; };
-		1B22D6B42E4EDA3000D80705 /* Firing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6A62E4EDA3000D80705 /* Firing.swift */; };
-		1B22D6B52E4EDA3000D80705 /* PieceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6A72E4EDA3000D80705 /* PieceDetailView.swift */; };
-		1B22D6B62E4EDA3000D80705 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6A82E4EDA3000D80705 /* Stage.swift */; };
-		1B22D6B72E4EDA3000D80705 /* FiringsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6A92E4EDA3000D80705 /* FiringsListView.swift */; };
-		1B22D6B82E4EDA3000D80705 /* StageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6AA2E4EDA3000D80705 /* StageEvent.swift */; };
-		1B22D6B92E4EDA3000D80705 /* AddPieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6AB2E4EDA3000D80705 /* AddPieceView.swift */; };
-		1B22D6BA2E4EDA3000D80705 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6AC2E4EDA3000D80705 /* Piece.swift */; };
-		1B22D6BB2E4EDA3000D80705 /* Glaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6AD2E4EDA3000D80705 /* Glaze.swift */; };
-		1B22D6BC2E4EDA3000D80705 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6AE2E4EDA3000D80705 /* Media.swift */; };
-		1B22D6BD2E4EDA3000D80705 /* GlazesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6AF2E4EDA3000D80705 /* GlazesListView.swift */; };
-		1B22D6C02E4EDA9A00D80705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22D6BE2E4EDA9A00D80705 /* Assets.xcassets */; };
-		1B22D6C22E4EDCBE00D80705 /* AddStageEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6C12E4EDCBE00D80705 /* AddStageEventView.swift */; };
-		1B22D6C52E4EDF5500D80705 /* ClayBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6C32E4EDF5500D80705 /* ClayBody.swift */; };
-		1B22D6C62E4EDF5500D80705 /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6C42E4EDF5500D80705 /* DataSeeder.swift */; };
+		1B22D6E32E4EE20A00D80705 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6C72E4EE20A00D80705 /* Stage.swift */; };
+		1B22D6E42E4EE20A00D80705 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6C92E4EE20A00D80705 /* DashboardView.swift */; };
+		1B22D6E52E4EE20A00D80705 /* FiringsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6CB2E4EE20A00D80705 /* FiringsListView.swift */; };
+		1B22D6E62E4EE20A00D80705 /* GlazesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6CD2E4EE20A00D80705 /* GlazesListView.swift */; };
+		1B22D6E72E4EE20A00D80705 /* AddPieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6CF2E4EE20A00D80705 /* AddPieceView.swift */; };
+		1B22D6E82E4EE20A00D80705 /* AddStageEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6D02E4EE20A00D80705 /* AddStageEventView.swift */; };
+		1B22D6E92E4EE20A00D80705 /* PieceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6D12E4EE20A00D80705 /* PieceDetailView.swift */; };
+		1B22D6EA2E4EE20A00D80705 /* PiecesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6D22E4EE20A00D80705 /* PiecesListView.swift */; };
+		1B22D6EB2E4EE20A00D80705 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6D42E4EE20A00D80705 /* SettingsView.swift */; };
+		1B22D6EC2E4EE20A00D80705 /* ClayBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6D72E4EE20A00D80705 /* ClayBody.swift */; };
+		1B22D6ED2E4EE20A00D80705 /* Firing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6D82E4EE20A00D80705 /* Firing.swift */; };
+		1B22D6EE2E4EE20A00D80705 /* Glaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6D92E4EE20A00D80705 /* Glaze.swift */; };
+		1B22D6EF2E4EE20A00D80705 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6DA2E4EE20A00D80705 /* Media.swift */; };
+		1B22D6F02E4EE20A00D80705 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6DB2E4EE20A00D80705 /* Piece.swift */; };
+		1B22D6F12E4EE20A00D80705 /* StageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6DC2E4EE20A00D80705 /* StageEvent.swift */; };
+		1B22D6F22E4EE20A00D80705 /* ClayAndFurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6DE2E4EE20A00D80705 /* ClayAndFurApp.swift */; };
+		1B22D6F32E4EE20A00D80705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6DF2E4EE20A00D80705 /* ContentView.swift */; };
+		1B22D6F42E4EE20A00D80705 /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6E12E4EE20A00D80705 /* DataSeeder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,33 +49,29 @@
 
 /* Begin PBXFileReference section */
 		1B22D6722E4ED57F00D80705 /* ClayAndFur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClayAndFur.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B22D6752E4ED57F00D80705 /* ClayAndFurApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClayAndFurApp.swift; sourceTree = "<group>"; };
-		1B22D6772E4ED57F00D80705 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1B22D6792E4ED57F00D80705 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		1B22D67B2E4ED58000D80705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1B22D67E2E4ED58000D80705 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B22D6842E4ED58000D80705 /* ClayAndFurTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClayAndFurTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B22D6882E4ED58000D80705 /* ClayAndFurTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClayAndFurTests.swift; sourceTree = "<group>"; };
 		1B22D68E2E4ED58000D80705 /* ClayAndFurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClayAndFurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B22D6922E4ED58000D80705 /* ClayAndFurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClayAndFurUITests.swift; sourceTree = "<group>"; };
 		1B22D6942E4ED58000D80705 /* ClayAndFurUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClayAndFurUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1B22D6A12E4EDA3000D80705 /* PiecesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesListView.swift; sourceTree = "<group>"; };
-		1B22D6A22E4EDA3000D80705 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		1B22D6A32E4EDA3000D80705 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		1B22D6A62E4EDA3000D80705 /* Firing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firing.swift; sourceTree = "<group>"; };
-		1B22D6A72E4EDA3000D80705 /* PieceDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceDetailView.swift; sourceTree = "<group>"; };
-		1B22D6A82E4EDA3000D80705 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
-		1B22D6A92E4EDA3000D80705 /* FiringsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiringsListView.swift; sourceTree = "<group>"; };
-		1B22D6AA2E4EDA3000D80705 /* StageEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StageEvent.swift; sourceTree = "<group>"; };
-		1B22D6AB2E4EDA3000D80705 /* AddPieceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPieceView.swift; sourceTree = "<group>"; };
-		1B22D6AC2E4EDA3000D80705 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
-		1B22D6AD2E4EDA3000D80705 /* Glaze.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glaze.swift; sourceTree = "<group>"; };
-		1B22D6AE2E4EDA3000D80705 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
-		1B22D6AF2E4EDA3000D80705 /* GlazesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlazesListView.swift; sourceTree = "<group>"; };
-		1B22D6BE2E4EDA9A00D80705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1B22D6C12E4EDCBE00D80705 /* AddStageEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStageEventView.swift; sourceTree = "<group>"; };
-		1B22D6C32E4EDF5500D80705 /* ClayBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClayBody.swift; sourceTree = "<group>"; };
-		1B22D6C42E4EDF5500D80705 /* DataSeeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
+		1B22D6C72E4EE20A00D80705 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		1B22D6C92E4EE20A00D80705 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		1B22D6CB2E4EE20A00D80705 /* FiringsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiringsListView.swift; sourceTree = "<group>"; };
+		1B22D6CD2E4EE20A00D80705 /* GlazesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlazesListView.swift; sourceTree = "<group>"; };
+		1B22D6CF2E4EE20A00D80705 /* AddPieceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPieceView.swift; sourceTree = "<group>"; };
+		1B22D6D02E4EE20A00D80705 /* AddStageEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStageEventView.swift; sourceTree = "<group>"; };
+		1B22D6D12E4EE20A00D80705 /* PieceDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceDetailView.swift; sourceTree = "<group>"; };
+		1B22D6D22E4EE20A00D80705 /* PiecesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesListView.swift; sourceTree = "<group>"; };
+		1B22D6D42E4EE20A00D80705 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1B22D6D72E4EE20A00D80705 /* ClayBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClayBody.swift; sourceTree = "<group>"; };
+		1B22D6D82E4EE20A00D80705 /* Firing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firing.swift; sourceTree = "<group>"; };
+		1B22D6D92E4EE20A00D80705 /* Glaze.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glaze.swift; sourceTree = "<group>"; };
+		1B22D6DA2E4EE20A00D80705 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		1B22D6DB2E4EE20A00D80705 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		1B22D6DC2E4EE20A00D80705 /* StageEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StageEvent.swift; sourceTree = "<group>"; };
+		1B22D6DE2E4EE20A00D80705 /* ClayAndFurApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClayAndFurApp.swift; sourceTree = "<group>"; };
+		1B22D6DF2E4EE20A00D80705 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1B22D6E12E4EE20A00D80705 /* DataSeeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,39 +122,13 @@
 		1B22D6742E4ED57F00D80705 /* ClayAndFur */ = {
 			isa = PBXGroup;
 			children = (
-				1B22D6C32E4EDF5500D80705 /* ClayBody.swift */,
-				1B22D6C42E4EDF5500D80705 /* DataSeeder.swift */,
-				1B22D6C12E4EDCBE00D80705 /* AddStageEventView.swift */,
-				1B22D6AB2E4EDA3000D80705 /* AddPieceView.swift */,
-				1B22D6A22E4EDA3000D80705 /* DashboardView.swift */,
-				1B22D6A62E4EDA3000D80705 /* Firing.swift */,
-				1B22D6A92E4EDA3000D80705 /* FiringsListView.swift */,
-				1B22D6AD2E4EDA3000D80705 /* Glaze.swift */,
-				1B22D6AF2E4EDA3000D80705 /* GlazesListView.swift */,
-				1B22D6AE2E4EDA3000D80705 /* Media.swift */,
-				1B22D6AC2E4EDA3000D80705 /* Piece.swift */,
-				1B22D6A72E4EDA3000D80705 /* PieceDetailView.swift */,
-				1B22D6A12E4EDA3000D80705 /* PiecesListView.swift */,
-				1B22D6A32E4EDA3000D80705 /* SettingsView.swift */,
-				1B22D6A82E4EDA3000D80705 /* Stage.swift */,
-				1B22D6AA2E4EDA3000D80705 /* StageEvent.swift */,
-				1B22D6BE2E4EDA9A00D80705 /* Assets.xcassets */,
-				1B22D6BF2E4EDA9A00D80705 /* Preview Content */,
-				1B22D6752E4ED57F00D80705 /* ClayAndFurApp.swift */,
-				1B22D6772E4ED57F00D80705 /* ContentView.swift */,
-				1B22D6792E4ED57F00D80705 /* Item.swift */,
-				1B22D67B2E4ED58000D80705 /* Assets.xcassets */,
-				1B22D67D2E4ED58000D80705 /* Preview Content */,
+				1B22D6E02E4EE20A00D80705 /* App */,
+				1B22D6DD2E4EE20A00D80705 /* Models */,
+				1B22D6E22E4EE20A00D80705 /* Services */,
+				1B22D6C82E4EE20A00D80705 /* Utilities */,
+				1B22D6D62E4EE20A00D80705 /* Views */,
 			);
 			path = ClayAndFur;
-			sourceTree = "<group>";
-		};
-		1B22D67D2E4ED58000D80705 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				1B22D67E2E4ED58000D80705 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		1B22D6872E4ED58000D80705 /* ClayAndFurTests */ = {
@@ -182,11 +148,97 @@
 			path = ClayAndFurUITests;
 			sourceTree = "<group>";
 		};
-		1B22D6BF2E4EDA9A00D80705 /* Preview Content */ = {
+		1B22D6C82E4EE20A00D80705 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1B22D6C72E4EE20A00D80705 /* Stage.swift */,
 			);
-			path = "Preview Content";
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1B22D6CA2E4EE20A00D80705 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D6C92E4EE20A00D80705 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		1B22D6CC2E4EE20A00D80705 /* Firings */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D6CB2E4EE20A00D80705 /* FiringsListView.swift */,
+			);
+			path = Firings;
+			sourceTree = "<group>";
+		};
+		1B22D6CE2E4EE20A00D80705 /* Glazes */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D6CD2E4EE20A00D80705 /* GlazesListView.swift */,
+			);
+			path = Glazes;
+			sourceTree = "<group>";
+		};
+		1B22D6D32E4EE20A00D80705 /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D6CF2E4EE20A00D80705 /* AddPieceView.swift */,
+				1B22D6D02E4EE20A00D80705 /* AddStageEventView.swift */,
+				1B22D6D12E4EE20A00D80705 /* PieceDetailView.swift */,
+				1B22D6D22E4EE20A00D80705 /* PiecesListView.swift */,
+			);
+			path = Pieces;
+			sourceTree = "<group>";
+		};
+		1B22D6D52E4EE20A00D80705 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D6D42E4EE20A00D80705 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		1B22D6D62E4EE20A00D80705 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D6CA2E4EE20A00D80705 /* Dashboard */,
+				1B22D6CC2E4EE20A00D80705 /* Firings */,
+				1B22D6CE2E4EE20A00D80705 /* Glazes */,
+				1B22D6D32E4EE20A00D80705 /* Pieces */,
+				1B22D6D52E4EE20A00D80705 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B22D6DD2E4EE20A00D80705 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D6D72E4EE20A00D80705 /* ClayBody.swift */,
+				1B22D6D82E4EE20A00D80705 /* Firing.swift */,
+				1B22D6D92E4EE20A00D80705 /* Glaze.swift */,
+				1B22D6DA2E4EE20A00D80705 /* Media.swift */,
+				1B22D6DB2E4EE20A00D80705 /* Piece.swift */,
+				1B22D6DC2E4EE20A00D80705 /* StageEvent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B22D6E02E4EE20A00D80705 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D6DE2E4EE20A00D80705 /* ClayAndFurApp.swift */,
+				1B22D6DF2E4EE20A00D80705 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1B22D6E22E4EE20A00D80705 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D6E12E4EE20A00D80705 /* DataSeeder.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +345,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B22D67F2E4ED58000D80705 /* Preview Assets.xcassets in Resources */,
-				1B22D6C02E4EDA9A00D80705 /* Assets.xcassets in Resources */,
-				1B22D67C2E4ED58000D80705 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,25 +369,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B22D6782E4ED57F00D80705 /* ContentView.swift in Sources */,
-				1B22D67A2E4ED57F00D80705 /* Item.swift in Sources */,
-				1B22D6B12E4EDA3000D80705 /* DashboardView.swift in Sources */,
-				1B22D6B62E4EDA3000D80705 /* Stage.swift in Sources */,
-				1B22D6B22E4EDA3000D80705 /* SettingsView.swift in Sources */,
-				1B22D6BB2E4EDA3000D80705 /* Glaze.swift in Sources */,
-				1B22D6C62E4EDF5500D80705 /* DataSeeder.swift in Sources */,
-				1B22D6B52E4EDA3000D80705 /* PieceDetailView.swift in Sources */,
-				1B22D6762E4ED57F00D80705 /* ClayAndFurApp.swift in Sources */,
-				1B22D6B92E4EDA3000D80705 /* AddPieceView.swift in Sources */,
-				1B22D6C22E4EDCBE00D80705 /* AddStageEventView.swift in Sources */,
-				1B22D6BA2E4EDA3000D80705 /* Piece.swift in Sources */,
-				1B22D6B82E4EDA3000D80705 /* StageEvent.swift in Sources */,
-				1B22D6C52E4EDF5500D80705 /* ClayBody.swift in Sources */,
-				1B22D6B72E4EDA3000D80705 /* FiringsListView.swift in Sources */,
-				1B22D6BD2E4EDA3000D80705 /* GlazesListView.swift in Sources */,
-				1B22D6B02E4EDA3000D80705 /* PiecesListView.swift in Sources */,
-				1B22D6B42E4EDA3000D80705 /* Firing.swift in Sources */,
-				1B22D6BC2E4EDA3000D80705 /* Media.swift in Sources */,
+				1B22D6E62E4EE20A00D80705 /* GlazesListView.swift in Sources */,
+				1B22D6EE2E4EE20A00D80705 /* Glaze.swift in Sources */,
+				1B22D6E32E4EE20A00D80705 /* Stage.swift in Sources */,
+				1B22D6F42E4EE20A00D80705 /* DataSeeder.swift in Sources */,
+				1B22D6F12E4EE20A00D80705 /* StageEvent.swift in Sources */,
+				1B22D6E92E4EE20A00D80705 /* PieceDetailView.swift in Sources */,
+				1B22D6ED2E4EE20A00D80705 /* Firing.swift in Sources */,
+				1B22D6EB2E4EE20A00D80705 /* SettingsView.swift in Sources */,
+				1B22D6F32E4EE20A00D80705 /* ContentView.swift in Sources */,
+				1B22D6E82E4EE20A00D80705 /* AddStageEventView.swift in Sources */,
+				1B22D6F22E4EE20A00D80705 /* ClayAndFurApp.swift in Sources */,
+				1B22D6E52E4EE20A00D80705 /* FiringsListView.swift in Sources */,
+				1B22D6F02E4EE20A00D80705 /* Piece.swift in Sources */,
+				1B22D6E42E4EE20A00D80705 /* DashboardView.swift in Sources */,
+				1B22D6E72E4EE20A00D80705 /* AddPieceView.swift in Sources */,
+				1B22D6EF2E4EE20A00D80705 /* Media.swift in Sources */,
+				1B22D6EC2E4EE20A00D80705 /* ClayBody.swift in Sources */,
+				1B22D6EA2E4EE20A00D80705 /* PiecesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
