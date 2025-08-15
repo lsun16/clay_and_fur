@@ -5,15 +5,15 @@ import SwiftData
 final class ClayBody {
     @Attribute(.unique) var id: UUID
     var name: String
-    var description: String?
+    var clayDescription: String?
     var cone: String?
     var color: String?
     var createdAt: Date
     
-    init(name: String, description: String? = nil, cone: String? = nil, color: String? = nil) {
+    init(name: String, clayDescription: String? = nil, cone: String? = nil, color: String? = nil) {
         self.id = UUID()
         self.name = name
-        self.description = description
+        self.clayDescription = clayDescription
         self.cone = cone
         self.color = color
         self.createdAt = Date()
@@ -27,16 +27,16 @@ final class FiringMethod {
     var type: String // "Bisque", "Glaze", "Raku", etc.
     var atmosphere: String? // "Oxidation", "Reduction", "Neutral"
     var defaultCone: String?
-    var description: String?
+    var methodDescription: String?
     var createdAt: Date
     
-    init(name: String, type: String, atmosphere: String? = nil, defaultCone: String? = nil, description: String? = nil) {
+    init(name: String, type: String, atmosphere: String? = nil, defaultCone: String? = nil, methodDescription: String? = nil) {
         self.id = UUID()
         self.name = name
         self.type = type
         self.atmosphere = atmosphere
         self.defaultCone = defaultCone
-        self.description = description
+        self.methodDescription = methodDescription
         self.createdAt = Date()
     }
 }

@@ -11,11 +11,11 @@ class DataSeeder {
         // Seed Clay Bodies if none exist
         if clayBodies?.isEmpty == true {
             let defaultClayBodies = [
-                ClayBody(name: "Stoneware", description: "High-fire clay body", cone: "10", color: "Gray"),
-                ClayBody(name: "Porcelain", description: "White high-fire clay", cone: "10", color: "White"),
-                ClayBody(name: "Earthenware", description: "Low-fire clay body", cone: "04", color: "Red/Brown"),
-                ClayBody(name: "B-Mix", description: "Popular cone 10 clay", cone: "10", color: "Buff"),
-                ClayBody(name: "Raku Clay", description: "Clay for raku firing", cone: "010", color: "Groggy")
+                ClayBody(name: "Stoneware", clayDescription: "High-fire clay body", cone: "10", color: "Gray"),
+                ClayBody(name: "Porcelain", clayDescription: "White high-fire clay", cone: "10", color: "White"),
+                ClayBody(name: "Earthenware", clayDescription: "Low-fire clay body", cone: "04", color: "Red/Brown"),
+                ClayBody(name: "B-Mix", clayDescription: "Popular cone 10 clay", cone: "10", color: "Buff"),
+                ClayBody(name: "Raku Clay", clayDescription: "Clay for raku firing", cone: "010", color: "Groggy")
             ]
             
             for clayBody in defaultClayBodies {
@@ -43,12 +43,12 @@ class DataSeeder {
         // Seed Firing Methods if none exist
         if firingMethods?.isEmpty == true {
             let defaultFiringMethods = [
-                FiringMethod(name: "Electric Bisque", type: "Bisque", atmosphere: "Oxidation", defaultCone: "04", description: "Standard electric bisque firing"),
-                FiringMethod(name: "Electric Glaze", type: "Glaze", atmosphere: "Oxidation", defaultCone: "10", description: "Standard electric glaze firing"),
-                FiringMethod(name: "Gas Reduction", type: "Glaze", atmosphere: "Reduction", defaultCone: "10", description: "Gas kiln reduction firing"),
-                FiringMethod(name: "Raku", type: "Glaze", atmosphere: "Reduction", defaultCone: "010", description: "Raku firing process"),
-                FiringMethod(name: "Wood Firing", type: "Glaze", atmosphere: "Reduction", defaultCone: "12", description: "Traditional wood firing"),
-                FiringMethod(name: "Soda Firing", type: "Glaze", atmosphere: "Reduction", defaultCone: "10", description: "Soda ash atmospheric firing")
+                FiringMethod(name: "Electric Bisque", type: "Bisque", atmosphere: "Oxidation", defaultCone: "04", methodDescription: "Standard electric bisque firing"),
+                FiringMethod(name: "Electric Glaze", type: "Glaze", atmosphere: "Oxidation", defaultCone: "10", methodDescription: "Standard electric glaze firing"),
+                FiringMethod(name: "Gas Reduction", type: "Glaze", atmosphere: "Reduction", defaultCone: "10", methodDescription: "Gas kiln reduction firing"),
+                FiringMethod(name: "Raku", type: "Glaze", atmosphere: "Reduction", defaultCone: "010", methodDescription: "Raku firing process"),
+                FiringMethod(name: "Wood Firing", type: "Glaze", atmosphere: "Reduction", defaultCone: "12", methodDescription: "Traditional wood firing"),
+                FiringMethod(name: "Soda Firing", type: "Glaze", atmosphere: "Reduction", defaultCone: "10", methodDescription: "Soda ash atmospheric firing")
             ]
             
             for method in defaultFiringMethods {
