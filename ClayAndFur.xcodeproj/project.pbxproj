@@ -41,6 +41,8 @@
 		1B22D7442E4EEF5C00D80705 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */; };
 		1B22D7492E4EF48A00D80705 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22D7472E4EF48A00D80705 /* Preview Assets.xcassets */; };
 		1B22D74B2E4EF4B800D80705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22D74A2E4EF4B800D80705 /* Assets.xcassets */; };
+		1BA3B90F2E4F0D7D008207FC /* StageEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3B90D2E4F0D7D008207FC /* StageEventDetailView.swift */; };
+		1BA3B9102E4F0D7E008207FC /* EditStageEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3B90E2E4F0D7D008207FC /* EditStageEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
 		1B22D7472E4EF48A00D80705 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B22D74A2E4EF4B800D80705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BA3B90D2E4F0D7D008207FC /* StageEventDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StageEventDetailView.swift; sourceTree = "<group>"; };
+		1BA3B90E2E4F0D7D008207FC /* EditStageEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditStageEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,8 @@
 		1B22D6D32E4EE20A00D80705 /* Pieces */ = {
 			isa = PBXGroup;
 			children = (
+				1BA3B90E2E4F0D7D008207FC /* EditStageEventView.swift */,
+				1BA3B90D2E4F0D7D008207FC /* StageEventDetailView.swift */,
 				1B22D7412E4EEF5C00D80705 /* PhotoCaptureView.swift */,
 				1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */,
 				1B22D6CF2E4EE20A00D80705 /* AddPieceView.swift */,
@@ -449,6 +455,8 @@
 				1B22D73B2E4EEDFC00D80705 /* AddGlazeView.swift in Sources */,
 				1B22D6EB2E4EE20A00D80705 /* SettingsView.swift in Sources */,
 				1B22D6F32E4EE20A00D80705 /* ContentView.swift in Sources */,
+				1BA3B9102E4F0D7E008207FC /* EditStageEventView.swift in Sources */,
+				1BA3B90F2E4F0D7D008207FC /* StageEventDetailView.swift in Sources */,
 				1B22D7332E4EEB9600D80705 /* ClayBodiesListView.swift in Sources */,
 				1B22D6E82E4EE20A00D80705 /* AddStageEventView.swift in Sources */,
 				1B22D6F22E4EE20A00D80705 /* ClayAndFurApp.swift in Sources */,
