@@ -17,6 +17,11 @@ struct AddPieceView: View {
     @State private var showingNewGlaze = false
     @State private var showingNewFiringMethod = false
     
+    // Photo capture states
+    @State private var showingCamera = false
+    @State private var showingPhotoLibrary = false
+    @State private var capturedImage: UIImage?
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -93,6 +98,52 @@ struct AddPieceView: View {
                     }
                 }
                 
+                Section("Photo (Optional)") {
+                    if let capturedImage = capturedImage {
+                        HStack {
+                            Image(uiImage: capturedImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 60, height: 60)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                            
+                            VStack(alignment: .leading) {
+                                Text("Photo captured")
+                                    .font(.subheadline)
+                                Button("Change Photo") {
+                                    showingCamera = true
+                                }
+                                .font(.caption)
+                                .foregroundColor(.blue)
+                            }
+                            
+                            Spacer()
+                            
+                            Button("Remove") {
+                                capturedImage = nil
+                            }
+                            .font(.caption)
+                            .foregroundColor(.red)
+                        }
+                    } else {
+                        HStack {
+                            Button(action: {
+                                showingCamera = true
+                            }) {
+                                Label("Take Photo", systemImage: "camera")
+                            }
+                            .buttonStyle(.bordered)
+                            
+                            Button(action: {
+                                showingPhotoLibrary = true
+                            }) {
+                                Label("Choose Photo", systemImage: "photo")
+                            }
+                            .buttonStyle(.bordered)
+                        }
+                    }
+                }
+                
                 Section("Notes") {
                     TextField("Notes", text: $notes, axis: .vertical)
                         .lineLimit(3...6)
@@ -114,6 +165,12 @@ struct AddPieceView: View {
                     .disabled(name.isEmpty)
                 }
             }
+            .sheet(isPresented: $showingCamera) {
+                ImagePicker(selectedImage: $capturedImage, sourceType: .camera)
+            }
+            .sheet(isPresented: $showingPhotoLibrary) {
+                ImagePicker(selectedImage: $capturedImage, sourceType: .photoLibrary)
+            }
         }
     }
     
@@ -129,6 +186,20 @@ struct AddPieceView: View {
         piece.glaze = selectedGlaze
         
         modelContext.insert(piece)
+        
+        // Add initial "thrown" stage event
+        piece.addStageEvent(.thrown, date: Date(), note: "Piece created")
+        
+        // Save the photo if one was captured
+        if let capturedImage = capturedImage {
+            let _ = PhotoManager.shared.createMediaFromImage(
+                capturedImage,
+                for: piece,
+                caption: "Initial photo",
+                stage: Stage.thrown.rawValue,
+                modelContext: modelContext
+            )
+        }
         
         do {
             try modelContext.save()

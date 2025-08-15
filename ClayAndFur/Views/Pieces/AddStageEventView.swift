@@ -19,6 +19,11 @@ struct AddStageEventView: View {
     @State private var selectedGlaze: Glaze?
     @State private var selectedFiringMethod: FiringMethod?
     
+    // Photo capture states
+    @State private var showingCamera = false
+    @State private var showingPhotoLibrary = false
+    @State private var capturedImage: UIImage?
+    
     init(piece: Piece) {
         self.piece = piece
         // Default to the next stage in the sequence
@@ -112,6 +117,52 @@ struct AddStageEventView: View {
                     }
                 }
                 
+                Section("Photo (Optional)") {
+                    if let capturedImage = capturedImage {
+                        HStack {
+                            Image(uiImage: capturedImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 60, height: 60)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                            
+                            VStack(alignment: .leading) {
+                                Text("Photo captured")
+                                    .font(.subheadline)
+                                Button("Change Photo") {
+                                    showingCamera = true
+                                }
+                                .font(.caption)
+                                .foregroundColor(.blue)
+                            }
+                            
+                            Spacer()
+                            
+                            Button("Remove") {
+                                capturedImage = nil
+                            }
+                            .font(.caption)
+                            .foregroundColor(.red)
+                        }
+                    } else {
+                        HStack {
+                            Button(action: {
+                                showingCamera = true
+                            }) {
+                                Label("Take Photo", systemImage: "camera")
+                            }
+                            .buttonStyle(.bordered)
+                            
+                            Button(action: {
+                                showingPhotoLibrary = true
+                            }) {
+                                Label("Choose Photo", systemImage: "photo")
+                            }
+                            .buttonStyle(.bordered)
+                        }
+                    }
+                }
+                
                 Section("Notes") {
                     TextField("Stage notes (optional)", text: $note, axis: .vertical)
                         .lineLimit(2...4)
@@ -132,6 +183,12 @@ struct AddStageEventView: View {
                     }
                 }
             }
+            .sheet(isPresented: $showingCamera) {
+                ImagePicker(selectedImage: $capturedImage, sourceType: .camera)
+            }
+            .sheet(isPresented: $showingPhotoLibrary) {
+                ImagePicker(selectedImage: $capturedImage, sourceType: .photoLibrary)
+            }
         }
     }
     
@@ -149,6 +206,17 @@ struct AddStageEventView: View {
             date: date,
             note: note.isEmpty ? nil : note
         )
+        
+        // Save the photo if one was captured
+        if let capturedImage = capturedImage {
+            let _ = PhotoManager.shared.createMediaFromImage(
+                capturedImage,
+                for: piece,
+                caption: "Stage: \(selectedStage.displayName)",
+                stage: selectedStage.rawValue,
+                modelContext: modelContext
+            )
+        }
         
         dismiss()
     }
