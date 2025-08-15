@@ -1,6 +1,5 @@
 import SwiftUI
 import SwiftData
-import UniformTypeIdentifiers
 
 struct DashboardView: View {
     @Environment(\.modelContext) private var modelContext

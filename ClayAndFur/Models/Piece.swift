@@ -86,12 +86,13 @@ final class Piece {
 }
 
 // MARK: - Transferable conformance for drag and drop
-extension Piece: Transferable {
-    static var transferRepresentation: some TransferRepresentation {
-        ProxyRepresentation(exporting: \.id.uuidString) {
-            DataRepresentation(exportedContentType: .plainText) { piece in
-                piece.id.uuidString.data(using: .utf8) ?? Data()
-            }
-        }
-    }
-}
+// TODO: Re-enable when drag and drop is implemented
+// extension Piece: Transferable {
+//     static var transferRepresentation: some TransferRepresentation {
+//         ProxyRepresentation(exporting: \.id.uuidString) {
+//             DataRepresentation(exportedContentType: .plainText) { piece in
+//                 piece.id.uuidString.data(using: .utf8) ?? Data()
+//             }
+//         }
+//     }
+// }
