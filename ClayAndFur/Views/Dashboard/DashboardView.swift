@@ -13,7 +13,8 @@ struct DashboardView: View {
                     ForEach(Stage.allCases) { stage in
                         StageColumnView(
                             stage: stage,
-                            pieces: pieces.filter { $0.currentStage == stage }
+                            pieces: pieces.filter { $0.currentStage == stage },
+                            allPieces: pieces
                         )
                     }
                 }
@@ -39,6 +40,7 @@ struct DashboardView: View {
 struct StageColumnView: View {
     let stage: Stage
     let pieces: [Piece]
+    let allPieces: [Piece]
     @Environment(\.modelContext) private var modelContext
     
     var body: some View {
@@ -82,9 +84,12 @@ struct StageColumnView: View {
         }
         .frame(width: 200)
         .padding(.vertical, 8)
-        .dropDestination(for: Piece.self) { droppedPieces, location in
-            for piece in droppedPieces {
-                moveToStage(piece: piece, newStage: stage)
+        .dropDestination(for: String.self) { droppedIDs, location in
+            for idString in droppedIDs {
+                if let uuid = UUID(uuidString: idString),
+                   let piece = allPieces.first(where: { $0.id == uuid }) {
+                    moveToStage(piece: piece, newStage: stage)
+                }
             }
             return true
         }

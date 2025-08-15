@@ -1,5 +1,6 @@
 import Foundation
 import SwiftData
+import UniformTypeIdentifiers
 
 @Model
 final class Piece {
@@ -81,5 +82,12 @@ final class Piece {
         if let weightG = weightG { self.weightG = weightG }
         if let notes = notes { self.notes = notes }
         self.updatedAt = Date()
+    }
+}
+
+// MARK: - Transferable conformance for drag and drop
+extension Piece: Transferable {
+    static var transferRepresentation: some TransferRepresentation {
+        ProxyRepresentation(exporting: \.id.uuidString)
     }
 }
