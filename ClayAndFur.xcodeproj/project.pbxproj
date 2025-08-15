@@ -41,6 +41,7 @@
 		1B22D7442E4EEF5C00D80705 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */; };
 		1B22D7492E4EF48A00D80705 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22D7472E4EF48A00D80705 /* Preview Assets.xcassets */; };
 		1B22D74B2E4EF4B800D80705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B22D74A2E4EF4B800D80705 /* Assets.xcassets */; };
+		1BA3B90C2E4F05EA008207FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA3B90B2E4F05EA008207FC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
 		1B22D7472E4EF48A00D80705 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B22D74A2E4EF4B800D80705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BA3B90B2E4F05EA008207FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				1B22D74A2E4EF4B800D80705 /* Assets.xcassets */,
+				1BA3B90B2E4F05EA008207FC /* Assets.xcassets */,
 				1B22D7482E4EF48A00D80705 /* Preview Content */,
 				1B22D6E02E4EE20A00D80705 /* App */,
 				1B22D6DD2E4EE20A00D80705 /* Models */,
@@ -409,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B22D74B2E4EF4B800D80705 /* Assets.xcassets in Resources */,
+				1BA3B90C2E4F05EA008207FC /* Assets.xcassets in Resources */,
 				1B22D7492E4EF48A00D80705 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
