@@ -6,11 +6,10 @@ struct PhotoCaptureView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
     
-    @State private var showingImagePicker = false
     @State private var showingCamera = false
+    @State private var showingPhotoLibrary = false
     @State private var selectedImage: UIImage?
     @State private var caption = ""
-    @State private var sourceType: UIImagePickerController.SourceType = .camera
     
     var body: some View {
         NavigationStack {
@@ -32,7 +31,6 @@ struct PhotoCaptureView: View {
                         HStack(spacing: 16) {
                             Button("Retake") {
                                 self.selectedImage = nil
-                                showImagePicker()
                             }
                             .buttonStyle(.bordered)
                             
@@ -61,8 +59,7 @@ struct PhotoCaptureView: View {
                         
                         VStack(spacing: 12) {
                             Button(action: {
-                                sourceType = .camera
-                                showImagePicker()
+                                showingCamera = true
                             }) {
                                 Label("Take Photo", systemImage: "camera")
                                     .frame(maxWidth: .infinity)
@@ -71,8 +68,7 @@ struct PhotoCaptureView: View {
                             .controlSize(.large)
                             
                             Button(action: {
-                                sourceType = .photoLibrary
-                                showImagePicker()
+                                showingPhotoLibrary = true
                             }) {
                                 Label("Choose from Library", systemImage: "photo.on.rectangle")
                                     .frame(maxWidth: .infinity)
@@ -95,14 +91,13 @@ struct PhotoCaptureView: View {
                     }
                 }
             }
-            .sheet(isPresented: $showingImagePicker) {
-                ImagePicker(selectedImage: $selectedImage, sourceType: sourceType)
+            .sheet(isPresented: $showingCamera) {
+                ImagePicker(selectedImage: $selectedImage, sourceType: .camera)
+            }
+            .sheet(isPresented: $showingPhotoLibrary) {
+                ImagePicker(selectedImage: $selectedImage, sourceType: .photoLibrary)
             }
         }
-    }
-    
-    private func showImagePicker() {
-        showingImagePicker = true
     }
     
     private func savePhoto() {
@@ -128,12 +123,27 @@ struct ImagePicker: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let picker = UIImagePickerController()
-        picker.sourceType = sourceType
+        
+        // Ensure the source type is available
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            picker.sourceType = sourceType
+        } else {
+            // Fallback to photo library if camera isn't available
+            picker.sourceType = .photoLibrary
+        }
+        
         picker.delegate = context.coordinator
+        picker.allowsEditing = false
+        
         return picker
     }
     
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
+        // Update the source type if it changes
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            uiViewController.sourceType = sourceType
+        }
+    }
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
