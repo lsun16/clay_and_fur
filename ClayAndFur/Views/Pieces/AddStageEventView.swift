@@ -118,9 +118,9 @@ struct AddStageEventView: View {
                 }
                 
                 Section("Photo (Optional)") {
-                    if let capturedImage = capturedImage {
+                    if let currentImage = capturedImage {
                         HStack {
-                            Image(uiImage: capturedImage)
+                            Image(uiImage: currentImage)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 60, height: 60)
@@ -139,7 +139,7 @@ struct AddStageEventView: View {
                             Spacer()
                             
                             Button("Remove") {
-                                capturedImage = nil
+                                self.capturedImage = nil
                             }
                             .font(.caption)
                             .foregroundColor(.red)

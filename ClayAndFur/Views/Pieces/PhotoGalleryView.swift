@@ -206,7 +206,7 @@ struct PhotoDetailView: View {
     
     private func deletePhoto() {
         // Delete file from storage
-        PhotoManager.shared.deletePhoto(fileName: media.fileName)
+        let _ = PhotoManager.shared.deletePhoto(fileName: media.fileName)
         
         // Remove from piece's media array
         if let index = piece.media.firstIndex(where: { $0.id == media.id }) {
