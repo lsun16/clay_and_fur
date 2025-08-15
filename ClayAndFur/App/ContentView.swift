@@ -19,26 +19,33 @@ struct ContentView: View {
                 }
                 .tag(1)
             
+            ClayBodiesListView()
+                .tabItem {
+                    Image(systemName: "cube")
+                    Text("Clay Bodies")
+                }
+                .tag(2)
+            
             GlazesListView()
                 .tabItem {
                     Image(systemName: "paintbrush")
                     Text("Glazes")
                 }
-                .tag(2)
+                .tag(3)
             
             FiringsListView()
                 .tabItem {
                     Image(systemName: "flame")
                     Text("Firings")
                 }
-                .tag(3)
+                .tag(4)
             
             SettingsView()
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")
                 }
-                .tag(4)
+                .tag(5)
         }
         .accentColor(.orange)
     }
