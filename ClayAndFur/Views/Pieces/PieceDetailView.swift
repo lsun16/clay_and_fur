@@ -141,62 +141,69 @@ struct PieceDetailView: View {
                     
                     LazyVStack(spacing: 12) {
                         ForEach(piece.stages.sorted(by: { $0.date > $1.date }), id: \.id) { stageEvent in
-                            HStack(spacing: 12) {
-                                Circle()
-                                    .fill(stageEvent.stage.color)
-                                    .frame(width: 12, height: 12)
-                                
-                                VStack(alignment: .leading, spacing: 2) {
-                                    Text(stageEvent.stage.displayName)
-                                        .font(.subheadline)
-                                        .fontWeight(.medium)
+                            NavigationLink(destination: StageEventDetailView(piece: piece, stageEvent: stageEvent)) {
+                                HStack(spacing: 12) {
+                                    Circle()
+                                        .fill(stageEvent.stage.color)
+                                        .frame(width: 12, height: 12)
                                     
-                                    Text(stageEvent.date, style: .date)
-                                        .font(.caption)
-                                        .foregroundColor(.secondary)
-                                    
-                                    // Show relevant materials for each stage
-                                    Group {
-                                        if stageEvent.stage == .thrown, let clayBody = piece.clayBody {
-                                            Text("Clay: \(clayBody.name)")
-                                                .font(.caption)
-                                                .foregroundColor(.orange)
-                                                .fontWeight(.medium)
-                                        } else if stageEvent.stage == .thrown, let clayBodyName = piece.clayBodyName {
-                                            Text("Clay: \(clayBodyName)")
-                                                .font(.caption)
-                                                .foregroundColor(.orange)
-                                                .fontWeight(.medium)
-                                        }
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(stageEvent.stage.displayName)
+                                            .font(.subheadline)
+                                            .fontWeight(.medium)
                                         
-                                        if stageEvent.stage == .glazed, let glaze = piece.glaze {
-                                            Text("Glaze: \(glaze.name) (Cone \(glaze.cone))")
-                                                .font(.caption)
-                                                .foregroundColor(.purple)
-                                                .fontWeight(.medium)
-                                        }
-                                        
-                                        // Show if photos were taken at this stage
-                                        if piece.media.contains(where: { $0.stageAtCapture == stageEvent.stage.rawValue }) {
-                                            HStack(spacing: 4) {
-                                                Image(systemName: "camera.fill")
-                                                    .font(.caption2)
-                                                Text("Photo captured")
-                                                    .font(.caption2)
-                                            }
-                                            .foregroundColor(.blue)
-                                        }
-                                    }
-                                    
-                                    if let note = stageEvent.note, !note.isEmpty {
-                                        Text(note)
+                                        Text(stageEvent.date, style: .date)
                                             .font(.caption)
                                             .foregroundColor(.secondary)
+                                        
+                                        // Show relevant materials for each stage
+                                        Group {
+                                            if stageEvent.stage == .thrown, let clayBody = piece.clayBody {
+                                                Text("Clay: \(clayBody.name)")
+                                                    .font(.caption)
+                                                    .foregroundColor(.orange)
+                                                    .fontWeight(.medium)
+                                            } else if stageEvent.stage == .thrown, let clayBodyName = piece.clayBodyName {
+                                                Text("Clay: \(clayBodyName)")
+                                                    .font(.caption)
+                                                    .foregroundColor(.orange)
+                                                    .fontWeight(.medium)
+                                            }
+                                            
+                                            if stageEvent.stage == .glazed, let glaze = piece.glaze {
+                                                Text("Glaze: \(glaze.name) (Cone \(glaze.cone))")
+                                                    .font(.caption)
+                                                    .foregroundColor(.purple)
+                                                    .fontWeight(.medium)
+                                            }
+                                            
+                                            // Show if photos were taken at this stage
+                                            if piece.media.contains(where: { $0.stageAtCapture == stageEvent.stage.rawValue }) {
+                                                HStack(spacing: 4) {
+                                                    Image(systemName: "camera.fill")
+                                                        .font(.caption2)
+                                                    Text("Photo captured")
+                                                        .font(.caption2)
+                                                }
+                                                .foregroundColor(.blue)
+                                            }
+                                        }
+                                        
+                                        if let note = stageEvent.note, !note.isEmpty {
+                                            Text(note)
+                                                .font(.caption)
+                                                .foregroundColor(.secondary)
+                                        }
                                     }
+                                    
+                                    Spacer()
+                                    
+                                    Image(systemName: "chevron.right")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
                                 }
-                                
-                                Spacer()
                             }
+                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
