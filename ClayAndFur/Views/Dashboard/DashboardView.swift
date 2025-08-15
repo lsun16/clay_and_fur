@@ -116,53 +116,112 @@ struct StageColumnView: View {
 struct PieceCardView: View {
     let piece: Piece
     
+    var latestPhoto: UIImage? {
+        // Get the most recent photo
+        let sortedMedia = piece.media.sorted { $0.createdAt > $1.createdAt }
+        return sortedMedia.first?.loadImage()
+    }
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
+        VStack(alignment: .leading, spacing: 0) {
+            // Photo thumbnail section
+            if let photo = latestPhoto {
+                Image(uiImage: photo)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 80)
+                    .clipped()
+                    .overlay(
+                        // Stage indicator overlay
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Circle()
+                                    .fill(piece.currentStage.color)
+                                    .frame(width: 12, height: 12)
+                                    .shadow(color: .black.opacity(0.3), radius: 1)
+                            }
+                            Spacer()
+                        }
+                        .padding(8)
+                    )
+            } else {
+                // Placeholder when no photo
+                Rectangle()
+                    .fill(LinearGradient(
+                        gradient: Gradient(colors: [
+                            piece.currentStage.color.opacity(0.3),
+                            piece.currentStage.color.opacity(0.1)
+                        ]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .frame(height: 80)
+                    .overlay(
+                        VStack {
+                            Image(systemName: "photo")
+                                .font(.title2)
+                                .foregroundColor(piece.currentStage.color.opacity(0.6))
+                            HStack {
+                                Spacer()
+                                Circle()
+                                    .fill(piece.currentStage.color)
+                                    .frame(width: 12, height: 12)
+                            }
+                        }
+                        .padding(8)
+                    )
+            }
+            
+            // Content section
+            VStack(alignment: .leading, spacing: 6) {
                 Text(piece.name)
                     .font(.subheadline)
                     .fontWeight(.medium)
-                    .lineLimit(2)
-                Spacer()
-                Circle()
-                    .fill(piece.currentStage.color)
-                    .frame(width: 8, height: 8)
-            }
-            
-            if let clayBodyName = piece.clayBodyName {
-                Text(clayBodyName)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            } else if let clayBody = piece.clayBody {
-                Text(clayBody.name)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            
-            if let glaze = piece.glaze {
-                HStack {
-                    Image(systemName: "paintbrush.fill")
-                        .font(.caption2)
-                        .foregroundColor(.purple)
-                    Text(glaze.name)
+                    .lineLimit(1)
+                
+                if let clayBodyName = piece.clayBodyName {
+                    Text(clayBodyName)
                         .font(.caption)
                         .foregroundColor(.secondary)
+                        .lineLimit(1)
+                } else if let clayBody = piece.clayBody {
+                    Text(clayBody.name)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .lineLimit(1)
                 }
-            }
-            
-            HStack {
-                Text(piece.createdAt, style: .date)
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-                Spacer()
-                if piece.media.count > 0 {
-                    Image(systemName: "photo")
+                
+                if let glaze = piece.glaze {
+                    HStack {
+                        Image(systemName: "paintbrush.fill")
+                            .font(.caption2)
+                            .foregroundColor(.purple)
+                        Text(glaze.name)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                            .lineLimit(1)
+                    }
+                }
+                
+                HStack {
+                    Text(piece.createdAt, style: .date)
                         .font(.caption2)
                         .foregroundColor(.secondary)
+                    Spacer()
+                    if piece.media.count > 1 {
+                        HStack(spacing: 2) {
+                            Image(systemName: "photo.stack")
+                                .font(.caption2)
+                            Text("\(piece.media.count)")
+                                .font(.caption2)
+                        }
+                        .foregroundColor(.secondary)
+                    }
                 }
             }
+            .padding(12)
         }
-        .padding(12)
         .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
