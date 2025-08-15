@@ -238,16 +238,43 @@ struct StageTimelineView: View {
             if !sortedStageEvents.isEmpty {
                 VStack(alignment: .leading, spacing: 4) {
                     ForEach(sortedStageEvents.suffix(3), id: \.id) { stageEvent in
-                        HStack {
-                            Circle()
-                                .fill(stageEvent.stage.color)
-                                .frame(width: 8, height: 8)
-                            Text(stageEvent.stage.displayName)
-                                .font(.caption)
-                            Spacer()
-                            Text(stageEvent.date, style: .date)
-                                .font(.caption2)
-                                .foregroundColor(.secondary)
+                        VStack(alignment: .leading, spacing: 2) {
+                            HStack {
+                                Circle()
+                                    .fill(stageEvent.stage.color)
+                                    .frame(width: 8, height: 8)
+                                Text(stageEvent.stage.displayName)
+                                    .font(.caption)
+                                Spacer()
+                                Text(stageEvent.date, style: .date)
+                                    .font(.caption2)
+                                    .foregroundColor(.secondary)
+                            }
+                            
+                            // Show relevant materials
+                            HStack(spacing: 12) {
+                                Circle()
+                                    .fill(Color.clear)
+                                    .frame(width: 8, height: 8)
+                                VStack(alignment: .leading, spacing: 1) {
+                                    if stageEvent.stage == .thrown, let clayBody = piece.clayBody {
+                                        Text("Clay: \(clayBody.name)")
+                                            .font(.caption2)
+                                            .foregroundColor(.orange)
+                                    } else if stageEvent.stage == .thrown, let clayBodyName = piece.clayBodyName {
+                                        Text("Clay: \(clayBodyName)")
+                                            .font(.caption2)
+                                            .foregroundColor(.orange)
+                                    }
+                                    
+                                    if stageEvent.stage == .glazed, let glaze = piece.glaze {
+                                        Text("Glaze: \(glaze.name)")
+                                            .font(.caption2)
+                                            .foregroundColor(.purple)
+                                    }
+                                }
+                                Spacer()
+                            }
                         }
                     }
                     
