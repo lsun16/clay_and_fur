@@ -4,6 +4,8 @@ import SwiftData
 struct PieceDetailView: View {
     @Bindable var piece: Piece
     @State private var showingStageSheet = false
+    @State private var showingPhotoCapture = false
+    @State private var showingPhotoGallery = false
     
     var body: some View {
         ScrollView {
@@ -45,6 +47,84 @@ struct PieceDetailView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
                 }
+                
+                // Photos Section
+                VStack(alignment: .leading, spacing: 16) {
+                    HStack {
+                        Text("Photos")
+                            .font(.headline)
+                        Spacer()
+                        HStack(spacing: 12) {
+                            Button("Add Photo") {
+                                showingPhotoCapture = true
+                            }
+                            .font(.subheadline)
+                            .foregroundColor(.orange)
+                            
+                            if !piece.media.isEmpty {
+                                Button("View All") {
+                                    showingPhotoGallery = true
+                                }
+                                .font(.subheadline)
+                                .foregroundColor(.blue)
+                            }
+                        }
+                    }
+                    
+                    if piece.media.isEmpty {
+                        Text("No photos yet")
+                            .font(.body)
+                            .foregroundColor(.secondary)
+                    } else {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 12) {
+                                ForEach(piece.media.prefix(5), id: \.id) { media in
+                                    Button(action: {
+                                        showingPhotoGallery = true
+                                    }) {
+                                        Group {
+                                            if let image = media.loadImage() {
+                                                Image(uiImage: image)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                            } else {
+                                                Image(systemName: "photo")
+                                                    .font(.title2)
+                                                    .foregroundColor(.gray)
+                                            }
+                                        }
+                                        .frame(width: 80, height: 80)
+                                        .clipped()
+                                        .cornerRadius(8)
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
+                                }
+                                
+                                if piece.media.count > 5 {
+                                    Button(action: {
+                                        showingPhotoGallery = true
+                                    }) {
+                                        VStack {
+                                            Text("+\(piece.media.count - 5)")
+                                                .font(.headline)
+                                            Text("more")
+                                                .font(.caption)
+                                        }
+                                        .frame(width: 80, height: 80)
+                                        .background(Color(.systemGray5))
+                                        .cornerRadius(8)
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
+                                }
+                            }
+                            .padding(.horizontal, 1)
+                        }
+                    }
+                }
+                .padding()
+                .background(Color(.systemBackground))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
                 
                 // Stage Timeline
                 VStack(alignment: .leading, spacing: 16) {
@@ -111,6 +191,12 @@ struct PieceDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $showingStageSheet) {
             AddStageEventView(piece: piece)
+        }
+        .sheet(isPresented: $showingPhotoCapture) {
+            PhotoCaptureView(piece: piece)
+        }
+        .sheet(isPresented: $showingPhotoGallery) {
+            PhotoGalleryView(piece: piece)
         }
     }
 }

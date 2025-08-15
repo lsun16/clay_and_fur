@@ -32,6 +32,10 @@
 		1B22D7332E4EEB9600D80705 /* ClayBodiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D72E2E4EEB9600D80705 /* ClayBodiesListView.swift */; };
 		1B22D7342E4EEB9600D80705 /* ClayBodyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D72F2E4EEB9600D80705 /* ClayBodyDetailView.swift */; };
 		1B22D7352E4EEB9600D80705 /* EditClayBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7302E4EEB9600D80705 /* EditClayBodyView.swift */; };
+		1B22D73B2E4EEDFC00D80705 /* AddGlazeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7362E4EEDFC00D80705 /* AddGlazeView.swift */; };
+		1B22D73C2E4EEDFC00D80705 /* EditGlazeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7372E4EEDFC00D80705 /* EditGlazeView.swift */; };
+		1B22D73D2E4EEDFC00D80705 /* GlazeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7382E4EEDFC00D80705 /* GlazeDetailView.swift */; };
+		1B22D73E2E4EEDFC00D80705 /* GlazesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7392E4EEDFC00D80705 /* GlazesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		1B22D72E2E4EEB9600D80705 /* ClayBodiesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClayBodiesListView.swift; sourceTree = "<group>"; };
 		1B22D72F2E4EEB9600D80705 /* ClayBodyDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClayBodyDetailView.swift; sourceTree = "<group>"; };
 		1B22D7302E4EEB9600D80705 /* EditClayBodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditClayBodyView.swift; sourceTree = "<group>"; };
+		1B22D7362E4EEDFC00D80705 /* AddGlazeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGlazeView.swift; sourceTree = "<group>"; };
+		1B22D7372E4EEDFC00D80705 /* EditGlazeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGlazeView.swift; sourceTree = "<group>"; };
+		1B22D7382E4EEDFC00D80705 /* GlazeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlazeDetailView.swift; sourceTree = "<group>"; };
+		1B22D7392E4EEDFC00D80705 /* GlazesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlazesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +218,7 @@
 		1B22D6D62E4EE20A00D80705 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1B22D73A2E4EEDFC00D80705 /* Glazes */,
 				1B22D7312E4EEB9600D80705 /* ClayBodies */,
 				1B22D6CA2E4EE20A00D80705 /* Dashboard */,
 				1B22D6CC2E4EE20A00D80705 /* Firings */,
@@ -259,6 +268,17 @@
 				1B22D7302E4EEB9600D80705 /* EditClayBodyView.swift */,
 			);
 			path = ClayBodies;
+			sourceTree = "<group>";
+		};
+		1B22D73A2E4EEDFC00D80705 /* Glazes */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D7362E4EEDFC00D80705 /* AddGlazeView.swift */,
+				1B22D7372E4EEDFC00D80705 /* EditGlazeView.swift */,
+				1B22D7382E4EEDFC00D80705 /* GlazeDetailView.swift */,
+				1B22D7392E4EEDFC00D80705 /* GlazesListView.swift */,
+			);
+			path = Glazes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,12 +411,15 @@
 			files = (
 				1B22D6E62E4EE20A00D80705 /* GlazesListView.swift in Sources */,
 				1B22D6EE2E4EE20A00D80705 /* Glaze.swift in Sources */,
+				1B22D73E2E4EEDFC00D80705 /* GlazesListView.swift in Sources */,
 				1B22D6E32E4EE20A00D80705 /* Stage.swift in Sources */,
 				1B22D6F42E4EE20A00D80705 /* DataSeeder.swift in Sources */,
 				1B22D6F12E4EE20A00D80705 /* StageEvent.swift in Sources */,
 				1B22D6E92E4EE20A00D80705 /* PieceDetailView.swift in Sources */,
+				1B22D73D2E4EEDFC00D80705 /* GlazeDetailView.swift in Sources */,
 				1B22D6ED2E4EE20A00D80705 /* Firing.swift in Sources */,
 				1B22D7352E4EEB9600D80705 /* EditClayBodyView.swift in Sources */,
+				1B22D73B2E4EEDFC00D80705 /* AddGlazeView.swift in Sources */,
 				1B22D6EB2E4EE20A00D80705 /* SettingsView.swift in Sources */,
 				1B22D6F32E4EE20A00D80705 /* ContentView.swift in Sources */,
 				1B22D7332E4EEB9600D80705 /* ClayBodiesListView.swift in Sources */,
@@ -406,6 +429,7 @@
 				1B22D7322E4EEB9600D80705 /* AddClayBodyView.swift in Sources */,
 				1B22D7342E4EEB9600D80705 /* ClayBodyDetailView.swift in Sources */,
 				1B22D6F02E4EE20A00D80705 /* Piece.swift in Sources */,
+				1B22D73C2E4EEDFC00D80705 /* EditGlazeView.swift in Sources */,
 				1B22D6E42E4EE20A00D80705 /* DashboardView.swift in Sources */,
 				1B22D6E72E4EE20A00D80705 /* AddPieceView.swift in Sources */,
 				1B22D6EF2E4EE20A00D80705 /* Media.swift in Sources */,
