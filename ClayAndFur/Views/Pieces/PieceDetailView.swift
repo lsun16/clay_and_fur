@@ -117,7 +117,7 @@ struct PieceDetailView: View {
 
 #Preview {
     NavigationStack {
-        PieceDetailView(piece: Piece(name: "Test Bowl", clayBody: "Stoneware"))
+        PieceDetailView(piece: Piece(name: "Test Bowl", clayBodyName: "Stoneware"))
     }
     .modelContainer(for: [Piece.self, StageEvent.self, Glaze.self, RecipeLine.self, Firing.self, Media.self])
 }
