@@ -39,7 +39,6 @@
 		1B22D7402E4EEF4700D80705 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D73F2E4EEF4700D80705 /* PhotoManager.swift */; };
 		1B22D7432E4EEF5C00D80705 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7412E4EEF5C00D80705 /* PhotoCaptureView.swift */; };
 		1B22D7442E4EEF5C00D80705 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */; };
-		1B22D7462E4EEF6F00D80705 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B22D7452E4EEF6F00D80705 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +94,6 @@
 		1B22D73F2E4EEF4700D80705 /* PhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 		1B22D7412E4EEF5C00D80705 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
 		1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
-		1B22D7452E4EEF6F00D80705 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +144,6 @@
 		1B22D6742E4ED57F00D80705 /* ClayAndFur */ = {
 			isa = PBXGroup;
 			children = (
-				1B22D7452E4EEF6F00D80705 /* Info.plist */,
 				1B22D6E02E4EE20A00D80705 /* App */,
 				1B22D6DD2E4EE20A00D80705 /* Models */,
 				1B22D6E22E4EE20A00D80705 /* Services */,
@@ -397,7 +394,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B22D7462E4EEF6F00D80705 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +613,8 @@
 				DEVELOPMENT_TEAM = LLV9A3432Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Clay and Fur needs access to your camera to take photos of your pottery pieces at different stages of creation.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Clay and Fur needs access to your photo library to let you select existing photos of your pottery pieces.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -646,6 +644,8 @@
 				DEVELOPMENT_TEAM = LLV9A3432Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Clay and Fur needs access to your camera to take photos of your pottery pieces at different stages of creation.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Clay and Fur needs access to your photo library to let you select existing photos of your pottery pieces.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

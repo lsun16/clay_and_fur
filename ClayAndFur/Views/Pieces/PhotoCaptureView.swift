@@ -15,10 +15,10 @@ struct PhotoCaptureView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                if let selectedImage = selectedImage {
+                if let currentImage = selectedImage {
                     // Preview selected image
                     VStack(spacing: 16) {
-                        Image(uiImage: selectedImage)
+                        Image(uiImage: currentImage)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(maxHeight: 300)
@@ -31,7 +31,7 @@ struct PhotoCaptureView: View {
                         
                         HStack(spacing: 16) {
                             Button("Retake") {
-                                selectedImage = nil
+                                self.selectedImage = nil
                                 showImagePicker()
                             }
                             .buttonStyle(.bordered)
