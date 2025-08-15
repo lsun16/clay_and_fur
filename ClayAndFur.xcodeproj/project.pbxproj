@@ -36,6 +36,10 @@
 		1B22D73C2E4EEDFC00D80705 /* EditGlazeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7372E4EEDFC00D80705 /* EditGlazeView.swift */; };
 		1B22D73D2E4EEDFC00D80705 /* GlazeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7382E4EEDFC00D80705 /* GlazeDetailView.swift */; };
 		1B22D73E2E4EEDFC00D80705 /* GlazesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7392E4EEDFC00D80705 /* GlazesListView.swift */; };
+		1B22D7402E4EEF4700D80705 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D73F2E4EEF4700D80705 /* PhotoManager.swift */; };
+		1B22D7432E4EEF5C00D80705 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7412E4EEF5C00D80705 /* PhotoCaptureView.swift */; };
+		1B22D7442E4EEF5C00D80705 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */; };
+		1B22D7462E4EEF6F00D80705 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B22D7452E4EEF6F00D80705 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,10 @@
 		1B22D7372E4EEDFC00D80705 /* EditGlazeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGlazeView.swift; sourceTree = "<group>"; };
 		1B22D7382E4EEDFC00D80705 /* GlazeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlazeDetailView.swift; sourceTree = "<group>"; };
 		1B22D7392E4EEDFC00D80705 /* GlazesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlazesListView.swift; sourceTree = "<group>"; };
+		1B22D73F2E4EEF4700D80705 /* PhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
+		1B22D7412E4EEF5C00D80705 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
+		1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
+		1B22D7452E4EEF6F00D80705 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,7 @@
 		1B22D6742E4ED57F00D80705 /* ClayAndFur */ = {
 			isa = PBXGroup;
 			children = (
+				1B22D7452E4EEF6F00D80705 /* Info.plist */,
 				1B22D6E02E4EE20A00D80705 /* App */,
 				1B22D6DD2E4EE20A00D80705 /* Models */,
 				1B22D6E22E4EE20A00D80705 /* Services */,
@@ -199,6 +208,8 @@
 		1B22D6D32E4EE20A00D80705 /* Pieces */ = {
 			isa = PBXGroup;
 			children = (
+				1B22D7412E4EEF5C00D80705 /* PhotoCaptureView.swift */,
+				1B22D7422E4EEF5C00D80705 /* PhotoGalleryView.swift */,
 				1B22D6CF2E4EE20A00D80705 /* AddPieceView.swift */,
 				1B22D6D02E4EE20A00D80705 /* AddStageEventView.swift */,
 				1B22D6D12E4EE20A00D80705 /* PieceDetailView.swift */,
@@ -254,6 +265,7 @@
 		1B22D6E22E4EE20A00D80705 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1B22D73F2E4EEF4700D80705 /* PhotoManager.swift */,
 				1B22D6E12E4EE20A00D80705 /* DataSeeder.swift */,
 			);
 			path = Services;
@@ -385,6 +397,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B22D7462E4EEF6F00D80705 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +423,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B22D6E62E4EE20A00D80705 /* GlazesListView.swift in Sources */,
+				1B22D7442E4EEF5C00D80705 /* PhotoGalleryView.swift in Sources */,
 				1B22D6EE2E4EE20A00D80705 /* Glaze.swift in Sources */,
+				1B22D7432E4EEF5C00D80705 /* PhotoCaptureView.swift in Sources */,
 				1B22D73E2E4EEDFC00D80705 /* GlazesListView.swift in Sources */,
 				1B22D6E32E4EE20A00D80705 /* Stage.swift in Sources */,
 				1B22D6F42E4EE20A00D80705 /* DataSeeder.swift in Sources */,
@@ -430,6 +445,7 @@
 				1B22D7342E4EEB9600D80705 /* ClayBodyDetailView.swift in Sources */,
 				1B22D6F02E4EE20A00D80705 /* Piece.swift in Sources */,
 				1B22D73C2E4EEDFC00D80705 /* EditGlazeView.swift in Sources */,
+				1B22D7402E4EEF4700D80705 /* PhotoManager.swift in Sources */,
 				1B22D6E42E4EE20A00D80705 /* DashboardView.swift in Sources */,
 				1B22D6E72E4EE20A00D80705 /* AddPieceView.swift in Sources */,
 				1B22D6EF2E4EE20A00D80705 /* Media.swift in Sources */,
