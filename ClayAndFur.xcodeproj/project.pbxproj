@@ -28,6 +28,10 @@
 		1B22D6F22E4EE20A00D80705 /* ClayAndFurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6DE2E4EE20A00D80705 /* ClayAndFurApp.swift */; };
 		1B22D6F32E4EE20A00D80705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6DF2E4EE20A00D80705 /* ContentView.swift */; };
 		1B22D6F42E4EE20A00D80705 /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D6E12E4EE20A00D80705 /* DataSeeder.swift */; };
+		1B22D7322E4EEB9600D80705 /* AddClayBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D72D2E4EEB9600D80705 /* AddClayBodyView.swift */; };
+		1B22D7332E4EEB9600D80705 /* ClayBodiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D72E2E4EEB9600D80705 /* ClayBodiesListView.swift */; };
+		1B22D7342E4EEB9600D80705 /* ClayBodyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D72F2E4EEB9600D80705 /* ClayBodyDetailView.swift */; };
+		1B22D7352E4EEB9600D80705 /* EditClayBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22D7302E4EEB9600D80705 /* EditClayBodyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		1B22D6DE2E4EE20A00D80705 /* ClayAndFurApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClayAndFurApp.swift; sourceTree = "<group>"; };
 		1B22D6DF2E4EE20A00D80705 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B22D6E12E4EE20A00D80705 /* DataSeeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
+		1B22D72D2E4EEB9600D80705 /* AddClayBodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClayBodyView.swift; sourceTree = "<group>"; };
+		1B22D72E2E4EEB9600D80705 /* ClayBodiesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClayBodiesListView.swift; sourceTree = "<group>"; };
+		1B22D72F2E4EEB9600D80705 /* ClayBodyDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClayBodyDetailView.swift; sourceTree = "<group>"; };
+		1B22D7302E4EEB9600D80705 /* EditClayBodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditClayBodyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +210,7 @@
 		1B22D6D62E4EE20A00D80705 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1B22D7312E4EEB9600D80705 /* ClayBodies */,
 				1B22D6CA2E4EE20A00D80705 /* Dashboard */,
 				1B22D6CC2E4EE20A00D80705 /* Firings */,
 				1B22D6CE2E4EE20A00D80705 /* Glazes */,
@@ -239,6 +248,17 @@
 				1B22D6E12E4EE20A00D80705 /* DataSeeder.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1B22D7312E4EEB9600D80705 /* ClayBodies */ = {
+			isa = PBXGroup;
+			children = (
+				1B22D72D2E4EEB9600D80705 /* AddClayBodyView.swift */,
+				1B22D72E2E4EEB9600D80705 /* ClayBodiesListView.swift */,
+				1B22D72F2E4EEB9600D80705 /* ClayBodyDetailView.swift */,
+				1B22D7302E4EEB9600D80705 /* EditClayBodyView.swift */,
+			);
+			path = ClayBodies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,11 +396,15 @@
 				1B22D6F12E4EE20A00D80705 /* StageEvent.swift in Sources */,
 				1B22D6E92E4EE20A00D80705 /* PieceDetailView.swift in Sources */,
 				1B22D6ED2E4EE20A00D80705 /* Firing.swift in Sources */,
+				1B22D7352E4EEB9600D80705 /* EditClayBodyView.swift in Sources */,
 				1B22D6EB2E4EE20A00D80705 /* SettingsView.swift in Sources */,
 				1B22D6F32E4EE20A00D80705 /* ContentView.swift in Sources */,
+				1B22D7332E4EEB9600D80705 /* ClayBodiesListView.swift in Sources */,
 				1B22D6E82E4EE20A00D80705 /* AddStageEventView.swift in Sources */,
 				1B22D6F22E4EE20A00D80705 /* ClayAndFurApp.swift in Sources */,
 				1B22D6E52E4EE20A00D80705 /* FiringsListView.swift in Sources */,
+				1B22D7322E4EEB9600D80705 /* AddClayBodyView.swift in Sources */,
+				1B22D7342E4EEB9600D80705 /* ClayBodyDetailView.swift in Sources */,
 				1B22D6F02E4EE20A00D80705 /* Piece.swift in Sources */,
 				1B22D6E42E4EE20A00D80705 /* DashboardView.swift in Sources */,
 				1B22D6E72E4EE20A00D80705 /* AddPieceView.swift in Sources */,
