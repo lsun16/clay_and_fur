@@ -1,5 +1,6 @@
 {
   "images" : [
+
     {
       "filename" : "icon-20@2x.png",
       "idiom" : "iphone",
@@ -103,9 +104,9 @@
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "icon-1024.png",
-      "idiom" : "universal",
-      "platform" : "ios",
+      "filename" : "icon.PNG",
+      "idiom" : "ios-marketing",
+      "scale" : "1x",
       "size" : "1024x1024"
     }
   ],
