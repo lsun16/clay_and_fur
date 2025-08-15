@@ -187,9 +187,6 @@ struct AddPieceView: View {
         
         modelContext.insert(piece)
         
-        // Add initial "thrown" stage event
-        piece.addStageEvent(.thrown, date: Date(), note: "Piece created")
-        
         // Save the photo if one was captured
         if let capturedImage = capturedImage {
             let _ = PhotoManager.shared.createMediaFromImage(
