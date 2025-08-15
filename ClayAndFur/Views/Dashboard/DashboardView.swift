@@ -74,10 +74,11 @@ struct StageColumnView: View {
                             PieceCardView(piece: piece)
                         }
                         .buttonStyle(PlainButtonStyle())
-                        .draggable(piece) {
-                            PieceCardView(piece: piece)
-                                .opacity(0.8)
-                        }
+                        // TODO: Re-enable drag and drop once Transferable conformance is resolved
+                        // .draggable(piece) {
+                        //     PieceCardView(piece: piece)
+                        //         .opacity(0.8)
+                        // }
                     }
             }
             
@@ -85,15 +86,16 @@ struct StageColumnView: View {
         }
         .frame(width: 200)
         .padding(.vertical, 8)
-        .dropDestination(for: String.self) { droppedIDs, location in
-            for idString in droppedIDs {
-                if let uuid = UUID(uuidString: idString),
-                   let piece = allPieces.first(where: { $0.id == uuid }) {
-                    moveToStage(piece: piece, newStage: stage)
-                }
-            }
-            return true
-        }
+        // TODO: Re-enable drop destination once drag and drop is working
+        // .dropDestination(for: String.self) { droppedIDs, location in
+        //     for idString in droppedIDs {
+        //         if let uuid = UUID(uuidString: idString),
+        //            let piece = allPieces.first(where: { $0.id == uuid }) {
+        //             moveToStage(piece: piece, newStage: stage)
+        //         }
+        //     }
+        //     return true
+        // }
     }
     
     private func moveToStage(piece: Piece, newStage: Stage) {
